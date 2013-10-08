@@ -17,6 +17,7 @@ def create
 end
 
 def destroy
+  session.delete(:session_token)
   redirect_to movies_path
 end
 end
