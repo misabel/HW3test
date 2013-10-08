@@ -10,7 +10,7 @@
     %h1.title Rotten Potatoes!
     #main
       
-      - if !@current_user
+      - if @current_user == nil
         = button_to 'Sign Up/Login', login_path, :method => :get
       - else
         flash[:notice] = 'Your are logged in as #{@currentuser.user_id}
